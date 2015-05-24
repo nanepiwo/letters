@@ -79,6 +79,16 @@ function letters.register_letters(modname, subname, from_node, description, tile
 			groups = groups,
 			legacy_wallmounted = false,
 		})
+	
+		minetest.register_craft({
+			output = from_node,
+			recipe = {
+				{group:modname_subname_letter, group:modname_subname_letter, group:modname_subname_letter},
+				{group:modname_subname_letter, group:modname_subname_letter, group:modname_subname_letter},
+				{group:modname_subname_letter, group:modname_subname_letter, group:modname_subname_letter},
+			},
+		})
+	
 		--[[minetest.register_craft({
 			output = from_node,
 			recipe = {
